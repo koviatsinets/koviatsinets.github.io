@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
+}
+
+.Content {
+  width: 100%;
+  min-height: calc(100% - 300px);
+  background-color: rosybrown;
+}

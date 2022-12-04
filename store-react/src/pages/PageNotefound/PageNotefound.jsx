@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Error = () => {
+export const PageNotefound = () => {
   return (
     <div>404</div>
   )

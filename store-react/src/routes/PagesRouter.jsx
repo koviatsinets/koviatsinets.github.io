@@ -5,7 +5,7 @@ import { PageHome } from '../pages/PageHome/PageHome';
 import { PageCatalog } from '../pages/PageCatalog/PageCatalog';
 import { PageBusket } from '../pages/PageBusket/PageBusket';
 import { PageAbout } from '../pages/PageAbout/PageAbout';
-import { Error } from '../pages/Error/Error';
+import { PageNotefound } from '../pages/PageNotefound/PageNotefound';
 
 export const PagesRouter = () => {
           
@@ -15,7 +15,7 @@ export const PagesRouter = () => {
         <Route path="/catalog" element={<PageCatalog/>} />
         <Route path="/busket" element={<PageBusket/>} />
         <Route path="/about" element={<PageAbout/>} />
-        <Route path="*" element={<Error/>} />
+        <Route path="*" element={<PageNotefound/>} />
       </Routes>
     );
     

@@ -2,16 +2,21 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom';
 
 // import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-import { PagesLinks } from './components/PagesLinks/PagesLinks'
+
 import { PagesRouter } from './routes/PagesRouter';
+import { Header } from './components/Header/Header'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
   return (
     <BrowserRouter>
-      <PagesLinks />
-      <PagesRouter />
+      <Header />
+      <main className='Content'>
+        <PagesRouter />
+      </main>
+      <Footer />
     </BrowserRouter>
   );
 }
