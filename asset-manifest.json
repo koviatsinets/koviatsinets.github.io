@@ -1,13 +1,13 @@
 {
-  "main.css": "/store-react/static/css/main.e9c60615.chunk.css",
-  "main.js": "/store-react/static/js/main.054048a9.chunk.js",
-  "main.js.map": "/store-react/static/js/main.054048a9.chunk.js.map",
-  "static/js/1.2c02afda.chunk.js": "/store-react/static/js/1.2c02afda.chunk.js",
-  "static/js/1.2c02afda.chunk.js.map": "/store-react/static/js/1.2c02afda.chunk.js.map",
-  "runtime~main.js": "/store-react/static/js/runtime~main.40d8f26b.js",
-  "runtime~main.js.map": "/store-react/static/js/runtime~main.40d8f26b.js.map",
-  "static/css/main.e9c60615.chunk.css.map": "/store-react/static/css/main.e9c60615.chunk.css.map",
-  "index.html": "/store-react/index.html",
-  "precache-manifest.778df039d90164adac433e5ea521190c.js": "/store-react/precache-manifest.778df039d90164adac433e5ea521190c.js",
-  "service-worker.js": "/store-react/service-worker.js"
+  "files": {
+    "main.css": "/store-react/static/css/main.c96d8e59.css",
+    "main.js": "/store-react/static/js/main.5c54ed61.js",
+    "index.html": "/store-react/index.html",
+    "main.c96d8e59.css.map": "/store-react/static/css/main.c96d8e59.css.map",
+    "main.5c54ed61.js.map": "/store-react/static/js/main.5c54ed61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c96d8e59.css",
+    "static/js/main.5c54ed61.js"
+  ]
 }
