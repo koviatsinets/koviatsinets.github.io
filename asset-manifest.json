@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.74aee240.css",
-    "main.js": "/static/js/main.18382ad9.js",
+    "main.css": "/static/css/main.4558b336.css",
+    "main.js": "/static/js/main.88bf403d.js",
+    "static/media/lego-logo.svg": "/static/media/lego-logo.b02efc075a7a59e6ec97f8dfd58aa7f0.svg",
     "index.html": "/index.html",
-    "main.74aee240.css.map": "/static/css/main.74aee240.css.map",
-    "main.18382ad9.js.map": "/static/js/main.18382ad9.js.map"
+    "main.4558b336.css.map": "/static/css/main.4558b336.css.map",
+    "main.88bf403d.js.map": "/static/js/main.88bf403d.js.map"
   },
   "entrypoints": [
-    "static/css/main.74aee240.css",
-    "static/js/main.18382ad9.js"
+    "static/css/main.4558b336.css",
+    "static/js/main.88bf403d.js"
   ]
 }
