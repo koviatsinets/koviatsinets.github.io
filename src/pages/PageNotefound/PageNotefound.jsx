@@ -1,4 +1,5 @@
 import React from 'react'
+import './PageNotefound.scss';
 
 export const PageNotefound = () => {
   return (

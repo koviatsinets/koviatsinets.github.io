@@ -13,7 +13,7 @@ export const PagesLinks = () => {
     // }
 
     return (
-      <div>
+      <div className='PagesLinks'>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/catalog">Каталог</NavLink>
         <NavLink to="/busket">Корзина</NavLink>

@@ -1,7 +1,8 @@
 import React from 'react'
+import './PageAbout.scss'
 
 export const PageAbout = () => {
   return (
-    <div>PageAbout</div>
+    <div className='PageAbout'>PageAbout</div>
   )
 }

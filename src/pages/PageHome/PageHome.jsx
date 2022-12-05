@@ -3,6 +3,6 @@ import './PageHome.scss';
 
 export const PageHome = () => {
   return (
-    <div>Main</div>
+    <div className='PageHome'>Home</div>
   )
 }

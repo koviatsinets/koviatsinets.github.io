@@ -1,19 +1,21 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom';
-
-// import logo from './logo.svg';
 import './App.scss';
-
+// import logo from './logo.svg';
 
 import { PagesRouter } from './routes/PagesRouter';
-import { Header } from './components/Header/Header'
+import { HeaderPanel } from './components/HeaderPanel/HeaderPanel'
+import { NavBar } from './components/NavBar/NavBar'
 import { Footer } from './components/Footer/Footer'
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <main className='Content'>
+      <header className='Header'>
+        <HeaderPanel />
+        <NavBar />
+      </header>
+      <main className='Main'>
         <PagesRouter />
       </main>
       <Footer />

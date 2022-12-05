@@ -1,5 +1,14 @@
 .Footer {
     width: 100%;
     height: 200px;
-    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1f1d48;
+
+    div {
+        width: 200px;
+        height: 100px;
+        border: solid white 1px;
+    }
 }
