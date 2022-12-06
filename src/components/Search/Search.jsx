@@ -3,6 +3,6 @@ import './Search.scss'
 
 export const Search = () => {
   return (
-    <div className='Search'>Search</div>
+    <div className='Search'></div>
   )
 }

@@ -14,10 +14,10 @@ export const PagesLinks = () => {
 
     return (
       <div className='PagesLinks'>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/catalog">Каталог</NavLink>
-        <NavLink to="/busket">Корзина</NavLink>
-        <NavLink to="/about">О нас</NavLink>
+        <NavLink to="/">HOME</NavLink>
+        <NavLink to="/catalog">CATALOG</NavLink>
+        <NavLink to="/busket">CART</NavLink>
+        <NavLink to="/about">ABOUT</NavLink>
       </div>
     );
 

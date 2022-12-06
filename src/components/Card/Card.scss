@@ -1,0 +1,30 @@
+.Card {
+    width: 180px;
+    height: 280px;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(222, 222, 222) 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+
+    .Img {
+        width: 80%;
+    }
+
+    .Name {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .Price, .Name {
+        margin: 0;
+        padding: 0;
+    }
+
+    .Button {
+        cursor: pointer;
+    }
+}

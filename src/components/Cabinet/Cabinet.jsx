@@ -1,7 +1,8 @@
 import React from 'react'
+import './Cabinet.scss'
 
 export const Cabinet = () => {
   return (
-    <div>Cabinet</div>
+    <div className='Cabinet'></div>
   )
 }

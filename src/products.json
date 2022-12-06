@@ -1,0 +1,12 @@
+[
+    {"id": 1, "productName": "Экспресс пассажирский поезд", "series": "City", "fromAge": 7,  "numberDetails": 764, "price": 530, "inStock": true, "img": "https://legus.by/35750-large_default/lego-60329-den-v-shkole.jpg"},
+    {"id": 2, "productName": "День в школе", "series": "City", "fromAge": 6,  "numberDetails": 433, "price": 246, "inStock": true, "img": "https://legus.by/35750-large_default/lego-60329-den-v-shkole.jpg"},
+    {"id": 3, "productName": "Полицейская погоня в банке", "series": "City", "fromAge": 7,  "numberDetails": 915, "price": 399, "inStock": true, "img": "https://legus.by/35750-large_default/lego-60329-den-v-shkole.jpg"},
+    {"id": 4, "productName": "Пряничный домик Деда Мороза", "series": "Duplo", "fromAge": 2,  "numberDetails": 50, "price": 171, "inStock": true, "img": "https://legus.by/35750-large_default/lego-60329-den-v-shkole.jpg"},
+    {"id": 5, "productName": "Пожарная часть и вертолет", "series": "Duplo", "fromAge": 2,  "numberDetails": 117, "price": 380, "inStock": true, "img": "https://legus.by/35750-large_default/lego-60329-den-v-shkole.jpg"},
+    {"id": 6, "productName": "Гараж и автомойка", "series": "Duplo", "fromAge": 2,  "numberDetails": 112, "price": 394, "inStock": true, "img": "https://legus.by/35750-large_default/lego-60329-den-v-shkole.jpg"},
+    {"id": 7, "productName": "Дом для отпуска на пляже", "series": "Friends", "fromAge": 7,  "numberDetails": 686, "price": 302, "inStock": true, "img": "https://legus.by/35750-large_default/lego-60329-den-v-shkole.jpg"},
+    {"id": 8, "productName": "Машина для посадки деревьев", "series": "Friends", "fromAge": 6,  "numberDetails": 336, "price": 127, "inStock": true, "img": "https://legus.by/35750-large_default/lego-60329-den-v-shkole.jpg"},
+    {"id": 9, "productName": "Дом друзей на дереве", "series": "Friends", "fromAge": 8,  "numberDetails": 1114, "price": 308, "inStock": true, "img": "https://legus.by/35750-large_default/lego-60329-den-v-shkole.jpg"},
+    {"id": 10, "productName": "Рынок уличной еды", "series": "Friends", "fromAge": 6,  "numberDetails": 592, "price": 209, "inStock": true, "img": "https://legus.by/35750-large_default/lego-60329-den-v-shkole.jpg"}
+]

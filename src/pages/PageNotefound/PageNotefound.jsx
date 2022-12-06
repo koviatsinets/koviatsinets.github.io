@@ -3,6 +3,6 @@ import './PageNotefound.scss';
 
 export const PageNotefound = () => {
   return (
-    <div>404</div>
+    <div className='PageNotefound'>404</div>
   )
 }

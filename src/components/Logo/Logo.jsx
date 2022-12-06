@@ -1,6 +1,6 @@
 import React from 'react'
 import './Logo.scss'
-import image from '../../utils/lego-logo.svg'
+import image from '../../assets/lego-logo.svg'
 
 export const Logo = () => {
   return (

@@ -1,7 +1,8 @@
 import React from 'react'
+import './Phone.scss'
 
 export const Phone = () => {
   return (
-    <div>Phone</div>
+    <div className='Phone'>+375(29)144-86-98</div>
   )
 }
