@@ -1,8 +1,12 @@
 import React, { useRef } from 'react'
 import './Filter.scss'
 import { clientEvents } from '../../events'
+// import { useDispatch } from 'react-redux';
+import { setFilterProp } from '../../redux/productsSlice';
 
 export const Filter = props => {
+
+  // const dispatch = useDispatch();
 
   const themeCityRef = useRef(false)
   const themeDuploRef = useRef(false)
@@ -11,7 +15,7 @@ export const Filter = props => {
   const ageTypeTwoRef = useRef(false)
   const ageTypeThreeRef = useRef(false)
 
-  const filterItems = () => {
+  const filterObj = () => {
     const obj = {
       themeCity: themeCityRef.current.checked,
       themeDuplo: themeDuploRef.current.checked,
@@ -20,67 +24,41 @@ export const Filter = props => {
       ageTypeTwo: ageTypeTwoRef.current.checked,
       ageTypeThree: ageTypeThreeRef.current.checked
     }
-    clientEvents.emit("ESetFilterObj", obj)
+    clientEvents.emit("setFilterObj", obj)
   }
 
-  // const [theme, setTheme] = useState([]);
-  // const [age, setAge] = useState(null);
 
-  // const setStateTheme = eo => {
-  //   let arr = [...theme]
-  //   console.log(eo.target.checked)
-  //   if (eo.target.checked === true) {
-  //     arr.push(eo.target.value)
-  //   }
-  //   else {
-  //     let index = arr.indexOf(eo.target.value)
-  //     arr.splice(index, 1)
-  //     }
-  //   setTheme(arr)
-  //   }
-  //   // console.log(eo.target.value)
-  //   // setTheme(eo.target.value)
-  //   // clientEvents.emit("ESetStateTheme", eo.target.value)
-  
-
-  // const setStateAge = eo => {
-  //   setAge(eo.target.value)
-  //   clientEvents.emit("ESetStateAge", eo.target.value)
-  // }
-
-  // const setPieces = eo => {
-
-  // }
-
-  console.log('render Filter')
   return (
     <aside className='Filter'>
         <p className='Title'>Подбор конструктора</p>
         <div className='Block'>
           <p>Серия:</p>
           <div className='Row'>
-            <input type="checkbox" value={'City'} ref={themeCityRef} onChange={filterItems}/>
+            <input type="checkbox" value={'City'} 
+              ref={themeCityRef} onChange={filterObj}/>
             <p>City</p>
           </div>
           <div className='Row'>
-            <input type="checkbox" value={'Duplo'} ref={themeDuploRef} onChange={filterItems}/>
+            <input type="checkbox" value={'Duplo'}
+              ref={themeDuploRef} onChange={filterObj}/>
             <p>Duplo</p>
           </div>
           <div className='Row'>
-            <input type="checkbox" value={'Friends'} ref={themeFriendsRef} onChange={filterItems}/>
+            <input type="checkbox" value={'Friends'}
+              ref={themeFriendsRef} onChange={filterObj}/>
             <p>Frinds</p>
           </div>
         </div>
         <div className='Block'>
           <p>Возраст:</p>
           <label>
-            <input type="radio" value="1" ref={ageTypeOneRef} onChange={filterItems} />0-3
+            <input type="radio" value="1" ref={ageTypeOneRef} onChange={filterObj} />0-3
           </label>
           <label>
-            <input type="radio" value="2" ref={ageTypeTwoRef} onChange={filterItems} />3-6
+            <input type="radio" value="2" ref={ageTypeTwoRef} onChange={filterObj} />3-6
           </label>
           <label>
-            <input type="radio" value="3" ref={ageTypeThreeRef} onChange={filterItems} />6-8
+            <input type="radio" value="3" ref={ageTypeThreeRef} onChange={filterObj} />6-8
           </label>
         </div>
         {/* <div className='Block'>

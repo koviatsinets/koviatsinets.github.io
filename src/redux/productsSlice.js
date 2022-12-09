@@ -4,6 +4,14 @@ import productsArr from '../products.json';
 
 const initialState={
   products: productsArr,
+  filter: {
+    themeCity: false,
+    themeDuplo: false,
+    themeFriends: false,
+    ageTypeOne: false,
+    ageTypeTwo: false,
+    ageTypeThree: false,
+  }
 }
 
 export const productsSlice = createSlice({
@@ -11,16 +19,13 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {
 
-    productDelete: (state,action) => {
-      const obj = action.payload
-      console.log(state.products)
-      console.log(obj)
-      return obj;
+    setFilter: (state,action) => {
+      state.filter = action.payload
     },
   }
 });
 
-export const { productDelete } = productsSlice.actions;
+export const { setFilter } = productsSlice.actions;
 
 export default productsSlice.reducer;
 

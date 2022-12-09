@@ -9,8 +9,9 @@ import { Sort } from '../../components/Sort/Sort'
 
 export const PageCatalog = () => {
 
-  const [filteredItems, setFilteredItems] = useState([]);
-  const [filterProperties, setFilterProperties] = useState({
+  const market = useSelector( state => state.market );
+
+  const [filterParams, setFilterParams] = useState({
       themeCity: false,
       themeDuplo: false,
       themeFriends: false,
@@ -19,31 +20,86 @@ export const PageCatalog = () => {
       ageTypeThree: false
   })
 
+  const [sortParams, setSortParams] = useState({
+    sort: 'name-up',
+  })
+
   useEffect(() => {
-    clientEvents.addListener('ESetFilterObj', setFilterItems);
-
+    clientEvents.addListener('setFilterObj', setFilterParamsState);
+    clientEvents.addListener('setSortObj', setSortParamsState);
     return () => {
-      clientEvents.removeListener('ESetFilterObj', setFilterItems);
-
+      clientEvents.removeListener('setFilterObj', setFilterParamsState);
+      clientEvents.removeListener('setSortObj', setSortParamsState);
   }});
 
-  const market = useSelector( state => state.market );
-
-  const setFilterItems = obj => {
-    setFilterProperties(obj)
+  const setFilterParamsState = obj => {
+    setFilterParams(obj)
   }
 
-  const productsCode = market.products.map(el => 
-    <Card key={el.id} product={el}></Card>
-  )
-    console.log(filterProperties)
+  const setSortParamsState = obj => {
+    setSortParams(obj)
+  }
+
+
+
+  const filterAndSort = () => {
+    let res = [];
+    market.products.forEach(el => {
+      if (filterParams.themeCity && el.series === 'City') {
+        res.push(el)
+        console.log('отработал сити')
+      }
+      if (filterParams.themeDuplo && el.series === 'Duplo') {
+        res.push(el)
+        console.log('отработал дупло')
+      }
+      if (filterParams.themeFriends && el.series === 'Friends') {
+        res.push(el)
+        console.log('отработал друзья')
+      }
+    })
+    res.forEach(el => {
+      if (sortParams.sort === 'name-up') {
+        res.sort((a,b) => a.productName.localeCompare((b.productName)))
+      }
+      if (sortParams.sort === 'name-down') {
+        res.sort((a,b) => b.productName.localeCompare((a.productName)))
+      }
+      if (sortParams.sort === 'price-up') {
+        res.sort((a,b) => a.price - b.price)
+      }
+      if (sortParams.sort === 'price-down') {
+        res.sort((a,b) => b.price - a.price)
+      }
+    })
+      
+    
+    // if (filterParams.themeDuplo) {
+    //   res = res.filter(item => item.series === 'Duplo')
+    // }
+    // if (filterParams.themeFriends) {
+    //   res = res.filter(item => item.series === 'Friends')
+    // }
+    console.log(res)
+    const result = res.map(el => 
+      <Card key={el.id} product={el}></Card>
+    )
+    return result
+  }
+
+  // console.log(filterAndSort)
+  // const productsCode = market.products.map(el => 
+  //   <Card key={el.id} product={el}></Card>
+  // )
+    // console.log(market.products)
+    console.log(sortParams)
   return (
     <div className='PageCatalog'>
       <Filter />
       <section className='Section'>
         <Sort />
         <div className='ItemsField'>
-          {productsCode}
+          {filterAndSort()}
         </div>
       </section>
     </div>
