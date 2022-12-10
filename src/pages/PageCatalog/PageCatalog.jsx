@@ -17,7 +17,7 @@ export const PageCatalog = () => {
       themeFriends: false,
       ageTypeOne: false,
       ageTypeTwo: false,
-      ageTypeThree: false
+      ageTypeThree: false,
   })
 
   const [sortParams, setSortParams] = useState({
@@ -40,64 +40,67 @@ export const PageCatalog = () => {
     setSortParams(obj)
   }
 
-
-
   const filterAndSort = () => {
-    let res = [];
-    market.products.forEach(el => {
-      if (filterParams.themeCity && el.series === 'City') {
-        res.push(el)
-        console.log('отработал сити')
-      }
-      if (filterParams.themeDuplo && el.series === 'Duplo') {
-        res.push(el)
-        console.log('отработал дупло')
-      }
-      if (filterParams.themeFriends && el.series === 'Friends') {
-        res.push(el)
-        console.log('отработал друзья')
-      }
-    })
-    res.forEach(el => {
+
+    let newArrSeries = [];
+    let newArrAge = [];
+    let newArrDetails = [];
+    let newArrPrice = [];
+
+    newArrSeries = market.products.slice();
+
+    if (filterParams.themeCity || filterParams.themeDuplo || filterParams.Friends) {
+      newArrSeries.forEach(el => {
+        if ((filterParams.themeCity && el.series === 'City') ||
+        (filterParams.themeDuplo && el.series === 'Duplo') ||
+        (filterParams.themeFriends && el.series === 'Friends')){
+          newArrAge.push(el)}
+        }
+          )
+    } else {
+      newArrAge = newArrSeries;
+    } 
+    if (filterParams.ageTypeOne || filterParams.ageTypeTwo || filterParams.ageTypeThree) {
+      newArrAge.forEach(el => {
+        if (((filterParams.ageTypeOne) && (el.fromAge > 0 && el.fromAge <= 3)) ||
+        ((filterParams.ageTypeTwo) && (el.fromAge > 3 && el.fromAge <= 6)) ||
+        ((filterParams.ageTypeThree) && (el.fromAge > 6 && el.fromAge <= 8)))
+         newArrDetails.push(el)}) 
+    } else {
+      newArrDetails = newArrAge;
+    } 
+    
+
+    newArrDetails.forEach(el => {
       if (sortParams.sort === 'name-up') {
-        res.sort((a,b) => a.productName.localeCompare((b.productName)))
+        newArrDetails.sort((a,b) => a.productName.localeCompare((b.productName)))
       }
       if (sortParams.sort === 'name-down') {
-        res.sort((a,b) => b.productName.localeCompare((a.productName)))
+        newArrDetails.sort((a,b) => b.productName.localeCompare((a.productName)))
       }
       if (sortParams.sort === 'price-up') {
-        res.sort((a,b) => a.price - b.price)
+        newArrDetails.sort((a,b) => a.price - b.price)
       }
       if (sortParams.sort === 'price-down') {
-        res.sort((a,b) => b.price - a.price)
+        newArrDetails.sort((a,b) => b.price - a.price)
       }
     })
-      
-    
-    // if (filterParams.themeDuplo) {
-    //   res = res.filter(item => item.series === 'Duplo')
-    // }
-    // if (filterParams.themeFriends) {
-    //   res = res.filter(item => item.series === 'Friends')
-    // }
-    console.log(res)
-    const result = res.map(el => 
+
+    const result = newArrDetails.map(el => 
       <Card key={el.id} product={el}></Card>
     )
+
     return result
+
   }
 
-  // console.log(filterAndSort)
-  // const productsCode = market.products.map(el => 
-  //   <Card key={el.id} product={el}></Card>
-  // )
-    // console.log(market.products)
-    console.log(sortParams)
+  console.log(filterParams)
+  
   return (
     <div className='PageCatalog'>
-      <Filter />
+      <Filter filter={filterParams} />
       <section className='Section'>
-        <Sort />
+        <Sort sort={sortParams}/>
         <div className='ItemsField'>
           {filterAndSort()}
         </div>

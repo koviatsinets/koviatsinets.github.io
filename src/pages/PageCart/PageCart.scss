@@ -3,6 +3,29 @@
     height: 500px;
     background-color: rgb(154, 201, 151);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+    
+    .Title {
+        font-size: 26px;
+    }
+
+    .InCart {
+        width: 80%;
+        border: solid black 1px;
+    }
+
+    .Delivery {
+        width: 80%;
+        border: solid black 1px;
+    }
+
+    .Pay {
+        width: 80%;
+        border: solid black 1px;
+    }
+
+    
 }
