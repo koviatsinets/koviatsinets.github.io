@@ -4,7 +4,6 @@ import './NavBar.scss'
 import { Menu } from '../Menu/Menu'
 import { PagesLinks } from '../PagesLinks/PagesLinks'
 import { Search } from '../Search/Search'
-import { Cart } from '../Cart/Cart'
 
 export const NavBar = () => {
   return (
@@ -12,7 +11,7 @@ export const NavBar = () => {
       <Menu />
       <PagesLinks />
       <Search />
-      <Cart />
+      <div className='Cart'></div>
     </nav>
   )
 }

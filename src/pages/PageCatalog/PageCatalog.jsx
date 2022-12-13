@@ -18,6 +18,10 @@ export const PageCatalog = () => {
       ageTypeOne: false,
       ageTypeTwo: false,
       ageTypeThree: false,
+      detailsFrom: '',
+      detailsTo: Infinity,
+      priceFrom: '',
+      priceTo: Infinity,
   })
 
   const [sortParams, setSortParams] = useState({
@@ -42,59 +46,70 @@ export const PageCatalog = () => {
 
   const filterAndSort = () => {
 
-    let newArrSeries = [];
+    let newArrTheme = [];
     let newArrAge = [];
     let newArrDetails = [];
     let newArrPrice = [];
+    let newArrResult = [];
 
-    newArrSeries = market.products.slice();
+    newArrTheme = market.products.slice();
 
-    if (filterParams.themeCity || filterParams.themeDuplo || filterParams.Friends) {
-      newArrSeries.forEach(el => {
-        if ((filterParams.themeCity && el.series === 'City') ||
-        (filterParams.themeDuplo && el.series === 'Duplo') ||
-        (filterParams.themeFriends && el.series === 'Friends')){
+    if (filterParams.themeCity || filterParams.themeDuplo || filterParams.themeFriends) {
+      newArrTheme.forEach(el => {
+        if ((filterParams.themeCity && el.theme === 'City') ||
+        (filterParams.themeDuplo && el.theme === 'Duplo') ||
+        (filterParams.themeFriends && el.theme === 'Friends')){
           newArrAge.push(el)}
         }
           )
     } else {
-      newArrAge = newArrSeries;
+      newArrAge = newArrTheme;
     } 
+
     if (filterParams.ageTypeOne || filterParams.ageTypeTwo || filterParams.ageTypeThree) {
       newArrAge.forEach(el => {
-        if (((filterParams.ageTypeOne) && (el.fromAge > 0 && el.fromAge <= 3)) ||
-        ((filterParams.ageTypeTwo) && (el.fromAge > 3 && el.fromAge <= 6)) ||
-        ((filterParams.ageTypeThree) && (el.fromAge > 6 && el.fromAge <= 8)))
+        if (((filterParams.ageTypeOne) && (el.age > 0 && el.age <= 3)) ||
+        ((filterParams.ageTypeTwo) && (el.age > 3 && el.age <= 6)) ||
+        ((filterParams.ageTypeThree) && (el.age > 6 && el.age <= 8)))
          newArrDetails.push(el)}) 
     } else {
       newArrDetails = newArrAge;
     } 
-    
 
-    newArrDetails.forEach(el => {
+    if (filterParams.detailsFrom || filterParams.detailsTo) {
+      newArrPrice = newArrDetails.filter(el => el.details >= filterParams.detailsFrom && el.details <= filterParams.detailsTo)
+    } else {
+      newArrPrice = newArrDetails;
+    }
+
+    if (filterParams.priceFrom || filterParams.priceTo) {
+      newArrResult = newArrPrice.filter(el => el.price >= filterParams.priceFrom && el.price <= filterParams.priceTo)
+    } else {
+      newArrResult = newArrPrice;
+    }
+
+    newArrResult.forEach(el => {
       if (sortParams.sort === 'name-up') {
-        newArrDetails.sort((a,b) => a.productName.localeCompare((b.productName)))
+        newArrResult.sort((a,b) => a.prodName.localeCompare((b.prodName)))
       }
       if (sortParams.sort === 'name-down') {
-        newArrDetails.sort((a,b) => b.productName.localeCompare((a.productName)))
+        newArrResult.sort((a,b) => b.prodName.localeCompare((a.prodName)))
       }
       if (sortParams.sort === 'price-up') {
-        newArrDetails.sort((a,b) => a.price - b.price)
+        newArrResult.sort((a,b) => a.price - b.price)
       }
       if (sortParams.sort === 'price-down') {
-        newArrDetails.sort((a,b) => b.price - a.price)
+        newArrResult.sort((a,b) => b.price - a.price)
       }
     })
 
-    const result = newArrDetails.map(el => 
+    const result = newArrResult.map(el => 
       <Card key={el.id} product={el}></Card>
     )
 
     return result
 
   }
-
-  console.log(filterParams)
   
   return (
     <div className='PageCatalog'>
