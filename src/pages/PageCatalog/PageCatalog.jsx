@@ -31,9 +31,11 @@ export const PageCatalog = () => {
   useEffect(() => {
     clientEvents.addListener('setFilterObj', setFilterParamsState);
     clientEvents.addListener('setSortObj', setSortParamsState);
+    clientEvents.addListener('searchWithText', setSortParamsState);
     return () => {
       clientEvents.removeListener('setFilterObj', setFilterParamsState);
       clientEvents.removeListener('setSortObj', setSortParamsState);
+      clientEvents.addListener('searchWithText', setSortParamsState);
   }});
 
   const setFilterParamsState = obj => {

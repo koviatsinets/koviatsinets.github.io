@@ -1,8 +1,12 @@
 .Sort {
-    // width: 100%;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content:flex-end;
-    border: solid black 1px;
+    margin: 6px 0 6px 0;
+    
+    .Select {
+        height: 25px;
+        margin-right: 10px;
+    }
 }

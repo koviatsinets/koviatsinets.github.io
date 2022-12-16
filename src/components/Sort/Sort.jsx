@@ -16,7 +16,7 @@ export const Sort = props => {
 
   return (
     <div className='Sort'>
-      <select onChange={sortObj} className='Sort' ref={selectRef}>
+      <select onChange={sortObj} className='Select' ref={selectRef}>
             <option value="name-up">По названию товара, A-Я</option>
             <option value="name-down">По названию товара, Я-А</option>
             <option value="price-up">По цене, возрастание</option>

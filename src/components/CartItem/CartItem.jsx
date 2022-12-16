@@ -17,11 +17,11 @@ export const CartItem = props => {
         <img className='Img' src={props.product.img}></img>
       </td>
       <td>{props.product.prodName}</td>
-      <td>{props.product.age}</td>
+      <td>с {props.product.age} лет</td>
       <td>{props.product.details}</td>
-      <td>{props.product.price}</td>
+      <td>{props.product.price} руб.</td>
       <td>
-        <input type='button' onClick={deleteItem}></input>
+        <input type='button' onClick={deleteItem} value='Удалить'/>
       </td>
     </tr>
   )

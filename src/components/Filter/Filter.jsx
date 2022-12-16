@@ -84,26 +84,26 @@ const [checkedRadio, setCheckedRadio] = useState(null)
           <p>По кол-ву деталей:</p>
           <div className='Row'>
             <p>От</p>
-            <input type="number" value={props.filter.detailsFrom} ref={detailsFromRef} onChange={filterObj}/>
+            <input className='InputNumber' type="number" value={props.filter.detailsFrom} ref={detailsFromRef} onChange={filterObj}/>
           </div>
           <div className='Row'>
             <p>До</p>
-            <input type="number" value={props.filter.detailsTo === Infinity? '' : props.filter.detailsTo} ref={detailsToRef} onChange={filterObj}/> 
+            <input type="number" className='InputNumber' value={props.filter.detailsTo === Infinity? '' : props.filter.detailsTo} ref={detailsToRef} onChange={filterObj}/> 
           </div>
         </div>
         <div className='Block'>
           <p>По цене:</p>
           <div className='Row'>
             <p>От</p>
-            <input type="number" value={props.filter.priceFrom} ref={priceFromRef} onChange={filterObj}/>
+            <input type="number" className='InputNumber' value={props.filter.priceFrom} ref={priceFromRef} onChange={filterObj}/>
           </div>
           <div className='Row'>
             <p>До</p>
-            <input type="number" value={props.filter.priceTo === Infinity? '' : props.filter.priceTo} ref={priceToRef} onChange={filterObj}/> 
+            <input type="number" className='InputNumber' value={props.filter.priceTo === Infinity? '' : props.filter.priceTo} ref={priceToRef} onChange={filterObj}/> 
           </div>
         </div>
         <div className='Block'>
-          <input type="button" onClick={resetObj} value='Сброс'/>
+          <input className='Button' type="button" onClick={resetObj} value='Сброс'/>
         </div>
     </aside>
   )

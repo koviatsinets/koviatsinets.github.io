@@ -9,6 +9,11 @@
     justify-content: space-around;
     cursor: pointer;
     box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    padding-bottom: 5px;
+
+    p {
+        font-size: 14px;
+    }
 
     .Img {
         width: 80%;
@@ -21,6 +26,17 @@
 
     .Button {
         cursor: pointer;
-        margin-bottom: 10px;
+    }
+
+}
+
+.Checked {
+    // border: solid rgb(0, 198, 0) 2px;
+    background-color: rgba(0, 162, 0, 0.256);
+    .ThisProductInCart {
+        background-color: rgb(0, 198, 0);
+        text-align: center;
+        font-size: 14px;
+        padding: 2px;
     }
 }

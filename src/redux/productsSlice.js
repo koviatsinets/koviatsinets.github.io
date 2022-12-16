@@ -24,18 +24,13 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {
 
-    // setFilter: (state,action) => {
-    //   state.filter = action.payload
-    // },
-
     addInCart: (state, action) => {
-      console.log('Добавил в redux')
       state.cart.push(action.payload)
     },
 
     deleteFromCart: (state, action) => {
-      console.log('Удалил в redux')
-      console.log(action.payload)
+      const index = state.cart.findIndex(el => el.id === action.payload)
+      state.cart.splice(index, 1)
     }
   }
 
