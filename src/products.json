@@ -24,7 +24,7 @@
     {"id": 23, "theme": "City", "prodName": "Автомобиль для дорожных работ", "age": 4, "details": 58, "price": 20, "img": "https://legus.by/31464-large_default/lego-60284-avtomobil-dlya-dorozhnykh-rabot.jpg"},
     {"id": 24, "theme": "City", "prodName": "Команда пожарных", "age": 6, "details": 380, "price": 299, "img": "https://legus.by/31444-large_default/lego-60282-komanda-pozharnykh.jpg"},
     {"id": 25, "theme": "City", "prodName": "Пожарный спасательный вертолёт", "age": 5, "details": 93, "price": 45, "img": "https://legus.by/31444-large_default/lego-60282-komanda-pozharnykh.jpg"},
-    {"id": 26, "theme": "City", "prodName": "ППолицейский участок", "age": 6, "details": 743, "price": 382, "img": "https://legus.by/29157-large_default/lego-60246-policejskij-uchastok.jpg"},
+    {"id": 26, "theme": "City", "prodName": "Полицейский участок", "age": 6, "details": 743, "price": 382, "img": "https://legus.by/29157-large_default/lego-60246-policejskij-uchastok.jpg"},
 
     {"id": 27, "theme": "Duplo", "prodName": "Пряничный домик Деда Мороза", "age": 2, "details": 50, "price": 171, "img": "https://legus.by/36531-large_default/lego-10976-pryanichnyj-domik-deda-moroza.jpg"},
     {"id": 28, "theme": "Duplo", "prodName": "Пожарная часть и вертолет", "age": 2, "details": 117, "price": 380, "img": "https://legus.by/35966-large_default/lego-10970-pozharnaya-chast-i-vertolet.jpg"},
@@ -81,29 +81,27 @@
     {"id": 77, "theme": "Harry-Potter", "prodName": "Букля", "age": 10, "details": 630, "price": 325, "img": "https://legus.by/33020-large_default/lego-75979-buklya.jpg"},
     {"id": 78, "theme": "Harry-Potter", "prodName": "Замок Хогвартс", "age": 16, "details": 6020, "price": 1399, "img": "https://legus.by/25862-large_default/lego-71043-zamok-khogvarts.jpg"},
 
-    {"id": 79, "theme": "Harry-Potter", "prodName": "Замок Хогвартс", "age": 16, "details": 6020, "price": 1399, "img": "https://legus.by/25862-large_default/lego-71043-zamok-khogvarts.jpg"},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    {"id": 79, "theme": "Technic", "prodName": "Fast & Furious 1970 Dodge Charger", "age": 8, "details": 345, "price": 107, "img": "https://legus.by/36667-large_default/lego-76912-fast-furious-1970-dodge-charger-rt.jpg"},
+    {"id": 80, "theme": "Technic", "prodName": "Aston Martin DB5", "age": 8, "details": 298, "price": 107, "img": "https://legus.by/36659-large_default/lego-76911-aston-martin-db5.jpg"},
+    {"id": 81, "theme": "Technic", "prodName": "Lotus Evija", "age": 8, "details": 247, "price": 107, "img": "https://legus.by/36647-large_default/lego-76907-lotus-evija.jpg"},
+    {"id": 82, "theme": "Technic", "prodName": "Ferrari 512 M", "age": 8, "details": 291, "price": 107, "img": "https://legus.by/36640-large_default/lego-76906-1970-ferrari-512-m.jpg"},
+    {"id": 83, "theme": "Technic", "prodName": "Спасательный вертолет Airbus H175", "age": 11, "details": 2001, "price": 799, "img": "https://legus.by/36351-large_default/lego-42145-spasatelnyj-vertolet-airbus-h175.jpg"},
+    {"id": 84, "theme": "Technic", "prodName": "Ferrari Daytona SP3", "age": 18, "details": 3778, "price": 1265, "img": "https://legus.by/36196-large_default/lego-42143-ferrari-daytona-sp3.jpg"},
+    {"id": 85, "theme": "Technic", "prodName": "Гоночный автомобиль McLaren Formula 1", "age": 18, "details": 1432, "price": 596, "img": "https://legus.by/35892-large_default/lego-42141-gonochnyj-avtomobil-mclaren-formula-1.jpg"},
+    {"id": 86, "theme": "Technic", "prodName": "Машина-трансформер на ДУ", "age": 9, "details": 772, "price": 499, "img": "https://legus.by/35885-large_default/lego-42140-mashina-transformer-na-du.jpg"},
+    {"id": 87, "theme": "Technic", "prodName": "Внедорожный грузовик", "age": 10, "details": 764, "price": 393, "img": "https://legus.by/35875-large_default/lego-42139-vnedorozhnyj-gruzovik.jpg"},
+    {"id": 88, "theme": "Technic", "prodName": "Бэтмобиль", "age": 10, "details": 1360, "price": 495, "img": "https://legus.by/35842-large_default/lego-42127-betmobil.jpg"},
+    {"id": 89, "theme": "Technic", "prodName": "BMW M 1000 RR", "age": 18, "details": 1920, "price": 595, "img": "https://legus.by/35481-large_default/lego-42130-bmw-m-1000-rr.jpg"},
+    {"id": 90, "theme": "Technic", "prodName": "Bugatti Chiron", "age": 18, "details": 3599, "price": 1450, "img": "https://legus.by/35238-large_default/lego-42083-bugatti-chiron.jpg"},
+    {"id": 91, "theme": "Technic", "prodName": "Monster Jam Megalodon", "age": 7, "details": 260, "price": 83, "img": "https://legus.by/34953-large_default/lego-42134-monster-jam-megalodon.jpg"},
+    {"id": 92, "theme": "Technic", "prodName": "Formula E Porsche 99X Electric", "age": 9, "details": 422, "price": 231, "img": "https://legus.by/34941-large_default/lego-technic-42137-formula-e-porsche-99x-electric.jpg"},
+    {"id": 93, "theme": "Technic", "prodName": "Бульдозер Cat® D11 на пульте управления", "age": 18, "details": 3854, "price": 1395, "img": "https://legus.by/34606-large_default/lego-42131-buldozer-cat-d11-na-pulte-upravleniya.jpg"},
+    {"id": 94, "theme": "Technic", "prodName": "Ford F-150 Raptor", "age": 18, "details": 1379, "price": 485, "img": "https://legus.by/34379-large_default/lego-42126-ford-f-150-raptor.jpg"},
+    {"id": 95, "theme": "Technic", "prodName": "Ferrari 488 GTE AF Corse 51", "age": 18, "details": 1677, "price": 644, "img": "https://legus.by/31405-large_default/lego-42125-ferrari-488-gte-af-corse-51.jpg"},
+    {"id": 96, "theme": "Technic", "prodName": "Багги-внедорожник", "age": 10, "details": 374, "price": 549, "img": "https://legus.by/31395-large_default/lego-42124-baggi-vnedorozhnik.jpg"},
+    {"id": 97, "theme": "Technic", "prodName": "McLaren Senna GTR", "age": 9, "details": 830, "price": 249, "img": "https://legus.by/31385-large_default/lego-42123-mclaren-senna-gtr.jpg"},
+    {"id": 98, "theme": "Technic", "prodName": "Monster Jam Grave Digger", "age": 7, "details": 212, "price": 83, "img": "https://legus.by/31355-large_default/lego-42118-monster-jam-grave-digger.jpg"},
+    {"id": 99, "theme": "Technic", "prodName": "Lamborghini Sian FKP 37", "age": 18, "details": 3696, "price": 1375, "img": "https://legus.by/31032-large_default/lego-42115-lamborghini-sian-fkp-37.jpg"},
+    {"id": 100, "theme": "Technic", "prodName": "Ducati Panigale V4 R", "age": 10, "details": 646, "price": 306, "img": "https://legus.by/30071-large_default/lego-42107-ducati-panigale-v4-r.jpg"},
+    {"id": 101, "theme": "Technic", "prodName": "Porsche 911 RSR", "age": 10, "details": 1580, "price": 635, "img": "https://legus.by/27201-large_default/lego-42096-porsche-911-rsr.jpg"}
 ]

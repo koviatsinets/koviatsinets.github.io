@@ -4,9 +4,11 @@ import './PageAbout.scss'
 export const PageAbout = () => {
   return (
     <div className='PageAbout'>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora quibusdam reprehenderit amet eveniet at distinctio laborum, quod nulla possimus fugiat sapiente quaerat nobis sed doloribus vel nemo animi, placeat officia.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis accusamus molestias officiis itaque! Deleniti ullam qui illum. Ea quaerat suscipit deserunt dignissimos, alias rerum quidem consequuntur ad delectus maiores!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod dolores esse provident officia id cum placeat, dolorem, est harum amet fugiat impedit cumque, saepe ratione. Voluptate reiciendis labore atque!</p>
+      <div className='Wrapper'>
+        <p className='Text'>Компания Lego Group была основана Оле Кирком Кристиансеном (7 апреля 1891 – 11 марта 1958). Он родился в бедной фермерской семье в Ютландии, в Дании. Выучившись ремеслу плотника, в 1932 году основал компанию по производству предметов для повседневного обихода, таких как гладильные доски и лестницы. Большой прибыли компания не приносила и тогда вместе со своим сыном, Готфридом Кирком Кристиансеном, он занялся производством деревянных кубиков. Надо сказать, что эта идея не только помогла им удержаться на плаву, но и полностью изменила их жизнь. Новую компанию по производству игрушек Кристиансен назвал lego, соединив два датских слова — leg и godt (играть и хорошо).</p>
+        <p className='Text'>Lego расширилось до производства пластмассовых игрушек в 1947. Кубики стали пластмассовыми с идентичными штырьками, что дало возможность соединять их друг с другом. Надо сказать, что идея таких кирпичиков была уже не нова и пользовалась популярностью у британских детишек. Изучив образцы британской литейной компании, Оле изменил дизайн кирпичика и начал штамповку абсолютно новых образцов. Они были не так прочны как деревянные, но зато соединялись без усилий и плотно прилегали друг к другу.</p>  
+        <p className='Text'>Так появились на свет первые конструкторы LEGO. После смерти Оле Кирка Кристиансена в 1958 году, компанию возглавил его сын Готфрид, который с большим усердием продолжил дело отца и вывел компанию на международный уровень. Но чтобы заинтересовать покупателей на внешнем рынке Готфрид решает создать целую игрушечную систему. Но у кирпичиков все еще были некоторые проблемы с технической точки зрения: их способность к захвату была ограничена, и они не были очень универсальны. В 1958 кирпичный дизайн былутверждён, но потребовались еще пять лет, чтобы найти правильный материал для него. Окончательный вариант кирпичика Lego был запатентован в 13:58 28 января 1958. Кирпичики того года все еще совместимы с современными.</p>
+      </div>
     </div>
   )
 }

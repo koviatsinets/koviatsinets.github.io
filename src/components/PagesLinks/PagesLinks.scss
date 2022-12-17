@@ -4,11 +4,6 @@
     align-items: center;
     justify-content: space-between;
 
-
-    a:hover {
-        // border-bottom: solid #ae0d0d 2px;
-        color: #d80000;
-    }
     * {
         text-decoration: none;
         color: black;
@@ -16,7 +11,17 @@
         align-items: center;
         justify-content: center;
         height: 30px;
-        border-bottom: solid rgba(0, 0, 0, 0) 3px;
+        border-bottom: solid rgba(0, 0, 0, 0) 2px;
         transition: 0.2s;
     }
+
+    .ActivePageLink {
+        border-bottom: solid #ae0d0d 2px;
+        color: #ae0d0d;
+    }
+
+    a:hover {
+        color: #d80000;
+    }
+
 }

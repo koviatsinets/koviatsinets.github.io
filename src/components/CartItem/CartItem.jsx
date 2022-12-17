@@ -19,7 +19,7 @@ const CartItem = React.memo(function CartItem(props) {
   return (
     <tr className='CartItem' style={{opacity: opacityMode}}>
       <td>
-        <img className='Img' src={props.product.img} ></img>
+        <img className='Img' src={props.product.img} />
       </td>
       <td>{props.product.prodName}</td>
       <td>с {props.product.age} лет</td>

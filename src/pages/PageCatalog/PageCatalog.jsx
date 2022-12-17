@@ -15,9 +15,13 @@ export const PageCatalog = () => {
       themeCity: false,
       themeDuplo: false,
       themeFriends: false,
+      themeHarryPotter: false,
+      themeTechnic: false,
       ageTypeOne: false,
       ageTypeTwo: false,
       ageTypeThree: false,
+      ageTypeFour: false,
+      ageTypeFive: false,
       detailsFrom: '',
       detailsTo: Infinity,
       priceFrom: '',
@@ -59,9 +63,10 @@ export const PageCatalog = () => {
     let newArrDetails = [];
     let newArrPrice = [];
     let newArrResult = [];
+    let result = [];
 
     if (searchText) {
-      let startArr = market.products.slice().forEach(el => {
+      market.products.slice().forEach(el => {
         if ((el.prodName).toLowerCase().includes(searchText.toLowerCase())) {
           newArrTheme.push(el)
         }
@@ -72,11 +77,14 @@ export const PageCatalog = () => {
     }
 
 
-    if (filterParams.themeCity || filterParams.themeDuplo || filterParams.themeFriends) {
+    if (filterParams.themeCity || filterParams.themeDuplo || filterParams.themeFriends || filterParams.themeHarryPotter || filterParams.themeTechnic) {
       newArrTheme.forEach(el => {
         if ((filterParams.themeCity && el.theme === 'City') ||
         (filterParams.themeDuplo && el.theme === 'Duplo') ||
-        (filterParams.themeFriends && el.theme === 'Friends')){
+        (filterParams.themeFriends && el.theme === 'Friends') ||
+        (filterParams.themeHarryPotter && el.theme === 'Harry-Potter') ||
+        (filterParams.themeTechnic && el.theme === 'Technic'))
+        {
           newArrAge.push(el)}
         }
           )
@@ -84,11 +92,13 @@ export const PageCatalog = () => {
       newArrAge = newArrTheme;
     } 
 
-    if (filterParams.ageTypeOne || filterParams.ageTypeTwo || filterParams.ageTypeThree) {
+    if (filterParams.ageTypeOne || filterParams.ageTypeTwo || filterParams.ageTypeThree || filterParams.ageTypeFour || filterParams.ageTypeFive) {
       newArrAge.forEach(el => {
         if (((filterParams.ageTypeOne) && (el.age > 0 && el.age <= 3)) ||
         ((filterParams.ageTypeTwo) && (el.age > 3 && el.age <= 6)) ||
-        ((filterParams.ageTypeThree) && (el.age > 6 && el.age <= 8)))
+        ((filterParams.ageTypeThree) && (el.age > 6 && el.age <= 8)) ||
+        ((filterParams.ageTypeFour) && (el.age > 8 && el.age <= 12)) ||
+        ((filterParams.ageTypeFive) && (el.age > 12 && el.age <= 18)))
          newArrDetails.push(el)}) 
     } else {
       newArrDetails = newArrAge;
@@ -121,10 +131,15 @@ export const PageCatalog = () => {
       }
     })
 
-    const result = newArrResult.map(el => 
-      <Card key={el.id} product={el}></Card>
-    )
-
+    if (newArrResult.length === 0) {
+      result = <div className='Message'>Искомые товары не найдены</div>
+    }
+    else {
+      result = newArrResult.map(el => 
+        <Card key={el.id} product={el}></Card>
+      )
+    }
+    
     return result
 
   }
