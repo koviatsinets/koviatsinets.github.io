@@ -6,6 +6,7 @@ import './PageCatalog.scss';
 import Card from '../../components/Card/Card'
 import { Filter } from '../../components/Filter/Filter'
 import { Sort } from '../../components/Sort/Sort'
+import { Pagination } from '../../components/Pagination/Pagination'
 
 export const PageCatalog = () => {
 
@@ -135,13 +136,20 @@ export const PageCatalog = () => {
       result = <div className='Message'>Искомые товары не найдены</div>
     }
     else {
+
+      let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //массив, можно использовать массив объектов
+      let size = 3; //размер подмассива
+      let res = []; //массив в который будет выведен результат.
+      for (let i = 0; i <Math.ceil(array.length/size); i++){
+          res[i] = array.slice((i*size), (i*size) + size);
+      }
+      console.log(res);
+
       result = newArrResult.map(el => 
         <Card key={el.id} product={el}></Card>
       )
     }
-    
-    return result
-
+    return result;
   }
   
   return (

@@ -26,4 +26,23 @@
         align-items: center;
         justify-content: center;
     }
+
+    .ButtonPaginationBlock {
+
+        margin: 0 auto;
+
+        button {
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 30px 10px 30px 10px
+        }
+
+        button:hover {
+            background-color: rgb(255, 195, 106);
+        }
+
+    }
 }

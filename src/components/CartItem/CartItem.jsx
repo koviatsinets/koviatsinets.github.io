@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { deleteFromCart } from '../../redux/productsSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './CartItem.scss'
 
 const CartItem = React.memo(function CartItem(props) {
@@ -19,7 +19,7 @@ const CartItem = React.memo(function CartItem(props) {
   return (
     <tr className='CartItem' style={{opacity: opacityMode}}>
       <td>
-        <img className='Img' src={props.product.img} />
+        <img className='Img' src={props.product.img} alt='img'/>
       </td>
       <td>{props.product.prodName}</td>
       <td>с {props.product.age} лет</td>

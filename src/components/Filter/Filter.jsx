@@ -1,11 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import './Filter.scss'
 import { clientEvents } from '../../events'
-import { setFilterProp } from '../../redux/productsSlice';
 
 export const Filter = props => {
-
-const [checkedRadio, setCheckedRadio] = useState(null)
 
   const themeCityRef = useRef(false)
   const themeDuploRef = useRef(false)

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { addInCart } from '../../redux/productsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import './Card.scss'
@@ -8,19 +8,8 @@ const Card = React.memo(function Card(props) {
   const market = useSelector( state => state.market );
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-
-  //   return(
-
-  //   )
-  // })
-
   const add = () => {
     dispatch(addInCart(props.product))
-  }
-
-  const changeOpacity = () => {
-
   }
 
   const inCart = market.cart.find(el => el.id === props.product.id)
