@@ -1,20 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { addInCart } from '../../redux/productsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import './Card.scss'
 
-export const Card = props => {
+const Card = React.memo(function Card(props) {
 
   const market = useSelector( state => state.market );
   const dispatch = useDispatch();
+
+  // useEffect(() => {
+
+  //   return(
+
+  //   )
+  // })
 
   const add = () => {
     dispatch(addInCart(props.product))
   }
 
+  const changeOpacity = () => {
+
+  }
+
   const inCart = market.cart.find(el => el.id === props.product.id)
   var classNameStyle = inCart? 'Card Checked' : 'Card';
-
+console.log('Рендер <Card />')
   return (
     <div className={classNameStyle}>
         <img src={props.product.img} className='Img' alt='logo'></img>
@@ -29,4 +40,6 @@ export const Card = props => {
         }
     </div>
   )
-}
+});
+
+export default Card;

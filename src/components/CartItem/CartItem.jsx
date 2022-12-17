@@ -1,20 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { deleteFromCart } from '../../redux/productsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import './CartItem.scss'
 
-export const CartItem = props => {
+const CartItem = React.memo(function CartItem(props) {
 
+  const [opacityMode, setOpacityMode] = useState(1)
   const dispatch = useDispatch();
 
   const deleteItem = () => {
-    dispatch(deleteFromCart(props.product.id))
+    setOpacityMode(0)
+    setTimeout(() => {
+      dispatch(deleteFromCart(props.product.id))
+    }, 500)
+    
   }
 
   return (
-    <tr className='CartItem'>
+    <tr className='CartItem' style={{opacity: opacityMode}}>
       <td>
-        <img className='Img' src={props.product.img}></img>
+        <img className='Img' src={props.product.img} ></img>
       </td>
       <td>{props.product.prodName}</td>
       <td>с {props.product.age} лет</td>
@@ -25,4 +30,6 @@ export const CartItem = props => {
       </td>
     </tr>
   )
-}
+})
+
+export default CartItem

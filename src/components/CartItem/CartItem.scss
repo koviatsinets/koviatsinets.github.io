@@ -1,5 +1,13 @@
 .CartItem {
 
+    transition: opacity 0.5s;
+
+    // animation: changeOpacity 1s ;
+    //     @keyframes changeOpacity {
+    //         from { background-color: white}
+    //         to {background-color: rgb(0, 200, 0)}
+    //     }
+
     .Img {
         height: 100px;
     }

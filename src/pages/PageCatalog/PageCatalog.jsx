@@ -3,7 +3,7 @@ import { clientEvents } from '../../events';
 import { useSelector } from 'react-redux';
 import './PageCatalog.scss';
 
-import { Card } from '../../components/Card/Card'
+import Card from '../../components/Card/Card'
 import { Filter } from '../../components/Filter/Filter'
 import { Sort } from '../../components/Sort/Sort'
 
@@ -28,14 +28,16 @@ export const PageCatalog = () => {
     sort: 'name-up',
   })
 
+  const [searchText, setSearchText] = useState('')
+
   useEffect(() => {
     clientEvents.addListener('setFilterObj', setFilterParamsState);
     clientEvents.addListener('setSortObj', setSortParamsState);
-    clientEvents.addListener('searchWithText', setSortParamsState);
+    clientEvents.addListener('searchWithText', searchWithText);
     return () => {
       clientEvents.removeListener('setFilterObj', setFilterParamsState);
       clientEvents.removeListener('setSortObj', setSortParamsState);
-      clientEvents.addListener('searchWithText', setSortParamsState);
+      clientEvents.removeListener('searchWithText', searchWithText);
   }});
 
   const setFilterParamsState = obj => {
@@ -46,6 +48,10 @@ export const PageCatalog = () => {
     setSortParams(obj)
   }
 
+  const searchWithText = str => {
+    setSearchText(str)
+  }
+
   const filterAndSort = () => {
 
     let newArrTheme = [];
@@ -54,7 +60,17 @@ export const PageCatalog = () => {
     let newArrPrice = [];
     let newArrResult = [];
 
-    newArrTheme = market.products.slice();
+    if (searchText) {
+      let startArr = market.products.slice().forEach(el => {
+        if ((el.prodName).toLowerCase().includes(searchText.toLowerCase())) {
+          newArrTheme.push(el)
+        }
+      });
+      console.log(newArrTheme)
+    } else {
+      newArrTheme = market.products.slice();
+    }
+
 
     if (filterParams.themeCity || filterParams.themeDuplo || filterParams.themeFriends) {
       newArrTheme.forEach(el => {

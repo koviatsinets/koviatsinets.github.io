@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import './PageCart.scss'
 
-import { CartItem } from '../../components/CartItem/CartItem'
+import CartItem from '../../components/CartItem/CartItem'
 
 export const PageCart = () => {
 

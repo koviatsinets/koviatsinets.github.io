@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import './Search.scss'
-import { Link } from 'react-router-dom';
 import { clientEvents } from '../../events';
 
 export const Search = () => {
@@ -8,15 +7,19 @@ export const Search = () => {
   const textRef = useRef();
 
   const search = () => {
-    console.log(textRef.current.value)
-    clientEvents.emit('searchWithText')
+    clientEvents.emit('searchWithText', textRef.current.value)
+  }
+
+  const clear = () => {
+    textRef.current.value = ''
+    clientEvents.emit('searchWithText', textRef.current.value)
   }
 
   return (
     <div to="/catalog" className='SearchBlock'>
       <div className='SearchOpen'>
-        <input className='Text' type="text" ref={textRef}/>
-        <Link to="/catalog" className="Search material-symbols-outlined" onClick={search}>search</Link>
+        <input className='Text' type="text" ref={textRef} onChange={search}/>
+        <span className="Search material-symbols-outlined" onClick={clear}>close</span>
       </div>
     </div>
   )
