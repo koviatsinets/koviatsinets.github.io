@@ -3,7 +3,6 @@ import './NavBar.scss'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 
-import { Menu } from '../Menu/Menu'
 import { PagesLinks } from '../PagesLinks/PagesLinks'
 import { Search } from '../Search/Search'
 
@@ -13,7 +12,7 @@ export const NavBar = () => {
 
   return (
     <nav className='NavBar'>
-      <Menu/>
+      <div className='Menu'></div>
       <PagesLinks />
       <Search />
       <NavLink to="/busket" className='CartBox'>

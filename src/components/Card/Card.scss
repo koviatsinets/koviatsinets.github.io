@@ -10,6 +10,7 @@
     cursor: pointer;
     box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
     padding-bottom: 5px;
+    transition: transform 0.3s;
 
     p {
         font-size: 14px;
@@ -31,7 +32,6 @@
 }
 
 .Checked {
-    // border: solid rgb(0, 198, 0) 2px;
     background-color: rgba(0, 162, 0, 0.256);
     animation: backgr 0.5s ;
     @keyframes backgr {
@@ -53,3 +53,6 @@
     }
 }
 
+.Card:hover {
+    transform: scale(1.15);
+}
