@@ -14,7 +14,8 @@ const Card = React.memo(function Card(props) {
 
   const inCart = market.cart.find(el => el.id === props.product.id)
   var classNameStyle = inCart? 'Card Checked' : 'Card';
-console.log('Рендер <Card />')
+  
+  console.log('Рендер <Card />')
   return (
     <div className={classNameStyle}>
         <img src={props.product.img} className='Img' alt='logo'></img>

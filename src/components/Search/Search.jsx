@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import './Search.scss'
 import { clientEvents } from '../../events';
 
-export const Search = () => {
+export const Search = React.memo(function Search(props) {
 
   const textRef = useRef();
 
@@ -15,6 +15,7 @@ export const Search = () => {
     clientEvents.emit('searchWithText', textRef.current.value)
   }
 
+  console.log('Рендер <Search />')
   return (
     <div to="/catalog" className='SearchBlock'>
       <div className='SearchOpen'>
@@ -23,4 +24,4 @@ export const Search = () => {
       </div>
     </div>
   )
-}
+})

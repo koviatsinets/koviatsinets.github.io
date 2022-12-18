@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import './Filter.scss'
 import { clientEvents } from '../../events'
 
-export const Filter = props => {
+export const Filter = React.memo(function Filter(props) {
 
   const themeCityRef = useRef(false)
   const themeDuploRef = useRef(false)
@@ -58,7 +58,8 @@ export const Filter = props => {
     }
     clientEvents.emit("setFilterObj", obj)
   }
-
+  
+  console.log('Рендер <Filter />')
   return (
     <aside className='Filter'>
         <p className='Title'>Подбор конструктора</p>
@@ -130,4 +131,4 @@ export const Filter = props => {
         </div>
     </aside>
   )
-}
+})

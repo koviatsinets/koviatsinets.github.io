@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { clientEvents } from '../../events';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './PageCatalog.scss';
 
 import Card from '../../components/Card/Card'
@@ -8,7 +8,15 @@ import { Filter } from '../../components/Filter/Filter'
 import { Sort } from '../../components/Sort/Sort'
 import { Pagination } from '../../components/Pagination/Pagination'
 
+import { getProducts } from '../../redux/productsSlice';
+
 export const PageCatalog = () => {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getProducts())
+  }, [])
 
   const market = useSelector( state => state.market );
 
@@ -72,7 +80,6 @@ export const PageCatalog = () => {
           newArrTheme.push(el)
         }
       });
-      console.log(newArrTheme)
     } else {
       newArrTheme = market.products.slice();
     }
@@ -132,18 +139,18 @@ export const PageCatalog = () => {
       }
     })
 
-    if (newArrResult.length === 0) {
+    if (newArrResult.length === 0 && !market.loading) {
       result = <div className='Message'>Искомые товары не найдены</div>
     }
     else {
 
-      let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //массив, можно использовать массив объектов
-      let size = 3; //размер подмассива
-      let res = []; //массив в который будет выведен результат.
-      for (let i = 0; i <Math.ceil(array.length/size); i++){
-          res[i] = array.slice((i*size), (i*size) + size);
-      }
-      console.log(res);
+      // let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //массив, можно использовать массив объектов
+      // let size = 3; //размер подмассива
+      // let res = []; //массив в который будет выведен результат.
+      // for (let i = 0; i <Math.ceil(array.length/size); i++){
+      //     res[i] = array.slice((i*size), (i*size) + size);
+      // }
+      // console.log(res);
 
       result = newArrResult.map(el => 
         <Card key={el.id} product={el}></Card>
@@ -158,6 +165,8 @@ export const PageCatalog = () => {
       <section className='Section'>
         <Sort sort={sortParams}/>
         <div className='ItemsField'>
+          {market.loading && <div className='Loading'>Загрузка...</div>}
+          {(!market.loading && market.error) && <div className='Error'>Ошибка загрузки данных</div>}
           {filterAndSort()}
         </div>
       </section>

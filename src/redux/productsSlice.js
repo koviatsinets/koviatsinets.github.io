@@ -1,9 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-import productsArr from '../products.json';
+// import productsArr from '../products.json';
 
 const initialState={
-  products: productsArr,
+  products: [],
+  loading: false,
+  error: false,
   filter: {
     themeCity: false,
     themeDuplo: false,
@@ -19,6 +21,11 @@ const initialState={
   cart: [],
 }
 
+export const getProducts = createAsyncThunk('products/getProducts', async() => {
+  return fetch('https://react-lego-store-default-rtdb.firebaseio.com/products.json').then((res) =>
+    res.json())
+});
+
 export const productsSlice = createSlice({
   name: 'products',
   initialState,
@@ -32,8 +39,21 @@ export const productsSlice = createSlice({
       const index = state.cart.findIndex(el => el.id === action.payload)
       state.cart.splice(index, 1)
     }
+  },
+  extraReducers: (builder) => {
+    builder.addCase(getProducts.pending, (state) => {
+      state.loading = true
+    })
+    builder.addCase(getProducts.fulfilled, (state, action) => {
+      state.loading = false
+      state.products = action.payload
+      state.err = false
+    })
+    builder.addCase(getProducts.rejected, (state, action) => {
+      state.loading = false
+      state.error = action.error.message
+    })
   }
-
 
     
 });

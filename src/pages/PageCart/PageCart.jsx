@@ -7,14 +7,10 @@ import CartItem from '../../components/CartItem/CartItem'
 export const PageCart = () => {
 
   const market = useSelector( state => state.market );
-
-  console.log(market.cart)
-
+  
   const itemsCode = market.cart.map(el => {
-    console.log( el)
     return <CartItem key={el.id} product={el}></CartItem>
-  }
-  )
+  })
   
   return (
     <div className='PageCart'>

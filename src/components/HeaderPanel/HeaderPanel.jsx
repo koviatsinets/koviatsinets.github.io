@@ -3,6 +3,7 @@ import './HeaderPanel.scss'
 import imgLogo from '../../assets/lego-logo.svg'
 
 export const HeaderPanel = () => {
+
   return (
     <div className='HeaderPanel'>
         <img src={imgLogo} className='Logo' alt='logo'></img>
