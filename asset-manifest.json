@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.d646a2cc.css",
-    "main.js": "/static/js/main.8d87ed73.js",
+    "main.css": "/static/css/main.637e2429.css",
+    "main.js": "/static/js/main.a80e4f08.js",
     "static/media/lego-brick.png": "/static/media/lego-brick.2b978ad69e9714795a41.png",
+    "static/media/lego-harry-potter-logo.jpg": "/static/media/lego-harry-potter-logo.bc9391bcd0328afbfcdf.jpg",
+    "static/media/lego-city-logo.jpg": "/static/media/lego-city-logo.beffb4fec981b85e7084.jpg",
+    "static/media/lego-duplo-logo.jpg": "/static/media/lego-duplo-logo.6f81ace5ad99694afe28.jpg",
+    "static/media/lego-friends-jatek.jpg": "/static/media/lego-friends-jatek.487ae5c0855001239a29.jpg",
     "static/media/lego-logo.svg": "/static/media/lego-logo.b02efc075a7a59e6ec97f8dfd58aa7f0.svg",
     "index.html": "/index.html",
-    "main.d646a2cc.css.map": "/static/css/main.d646a2cc.css.map",
-    "main.8d87ed73.js.map": "/static/js/main.8d87ed73.js.map"
+    "main.637e2429.css.map": "/static/css/main.637e2429.css.map",
+    "main.a80e4f08.js.map": "/static/js/main.a80e4f08.js.map"
   },
   "entrypoints": [
-    "static/css/main.d646a2cc.css",
-    "static/js/main.8d87ed73.js"
+    "static/css/main.637e2429.css",
+    "static/js/main.a80e4f08.js"
   ]
 }
