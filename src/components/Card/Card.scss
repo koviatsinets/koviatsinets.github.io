@@ -56,3 +56,17 @@
 .Card:hover {
     transform: scale(1.15);
 }
+
+@media (min-width: 0px) and (max-width: 766px) {
+    .Card {
+        width: 100px;
+        height: 230px;
+        justify-content: space-between;
+        padding: 0;
+
+        p, button {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+}

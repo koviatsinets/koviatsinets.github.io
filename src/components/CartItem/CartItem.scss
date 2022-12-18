@@ -16,3 +16,13 @@
         cursor: pointer;
     }
 }
+
+@media (min-width: 0px) and (max-width: 766px) {
+    .CartItem {
+        font-size: 12px;
+
+        .Img {
+            height: 50px;
+        }
+    }
+}

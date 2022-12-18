@@ -40,11 +40,16 @@
     border-radius: 20px;
     border: solid rgba(0, 0, 0, 0) 2px;
     background-color: white;
-    
-    
 }
+
 .SearchBlock:hover {
     border: solid red 2px;
     transition: linear 0.2s;
 
+}
+
+@media (min-width: 0px) and (max-width: 766px) {
+   .Search, .SearchOpen, .SearchBlock {
+    display: none;
+   }
 }

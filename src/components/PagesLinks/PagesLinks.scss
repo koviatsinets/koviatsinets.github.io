@@ -25,3 +25,13 @@
     }
 
 }
+
+@media (min-width: 0px) and (max-width: 766px) {
+    .Search, .SearchOpen, .SearchBlock {
+     display: none;
+    }
+    .PagesLinks {
+        width: 260px;
+        font-size: 14px;
+    }
+ }

@@ -48,3 +48,23 @@
         cursor: pointer;
     }
 }
+
+@media (min-width: 0px) and (max-width: 766px) {
+    .Filter {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+
+        .Block {
+            width: auto;
+
+            .Button {
+                width: 100px;
+            }
+        }
+        .Title {
+            display: none;
+        }
+    }
+}

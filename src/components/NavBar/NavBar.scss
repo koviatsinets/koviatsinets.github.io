@@ -42,5 +42,24 @@
         color: #e40000;
         }
     }
+}
 
+@media (min-width: 0px) and (max-width: 766px) {
+    .Menu {
+        display: none;
+    }
+    .NavBar {
+        justify-content: space-around;
+    }
+    .NavBar .CartBox .Cart {
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+    .NavBar .CartBox .CartCount {
+        width: 20px;
+        height: 20px;
+        font-size: 16px;
+    }
 }

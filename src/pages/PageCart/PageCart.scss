@@ -62,3 +62,52 @@
         padding-top: 30px;
     }
 }
+
+@media (min-width: 0px) and (max-width: 766px) {
+    .PageCart {
+
+        .Cart {
+            th {
+                font-weight: normal;
+                font-size: 12px;
+            }
+            th:nth-child(1), th:nth-child(2) {
+                display: none;
+            }
+        }
+
+        .Order {
+            .Title {
+                font-size: 16px;
+            }
+            table {
+                font-size: 14px;
+
+                td:nth-child(1), td:nth-child(2) {
+                    display: none;
+                }
+            }
+
+            .Delivery{
+                .Row {
+                    input {
+                        width: 100px;
+                    }
+                }
+            }
+
+            .Button {
+                font-size: 14px;
+            }
+        }
+
+        .Img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .CartEmpty {
+            font-size: 14px;
+        }
+    }
+}

@@ -43,7 +43,6 @@
         button:hover {
             background-color: rgb(255, 195, 106);
         }
-        
     }
 
     .Loading, .Error {
@@ -59,4 +58,12 @@
         justify-content: center;
         font-size: 30px;
     }
+}
+
+@media (min-width: 0px) and (max-width: 766px) {
+
+    .PageCatalog {
+        flex-direction: column;
+    }
+
 }
