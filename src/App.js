@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store'
 import './App.scss';
+import './firebase'
 // import logo from './logo.svg';
 
 import { PagesRouter } from './routes/PagesRouter';
