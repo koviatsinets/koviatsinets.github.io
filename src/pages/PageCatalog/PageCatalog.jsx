@@ -19,6 +19,7 @@ export const PageCatalog = () => {
   }, [])
 
   const market = useSelector( state => state.market );
+  const user = useSelector( state => state.user)
 
   const [filterParams, setFilterParams] = useState({
       themeCity: false,
@@ -158,6 +159,9 @@ export const PageCatalog = () => {
     }
     return result;
   }
+
+  console.log(market)
+  console.log(user)
   
   return (
     <div className='PageCatalog'>

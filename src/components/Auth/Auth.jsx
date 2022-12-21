@@ -1,10 +1,11 @@
 import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import './Auth.scss'
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { setUser } from '../../redux/userSlice'
 
 export const Auth = props => {
+
 
     const dispatch = useDispatch()
 
@@ -12,17 +13,27 @@ export const Auth = props => {
     const passwordRef = useRef()
 
     const authorization = () => {
-       
-    }
-    const registration = () => {
         console.log(emailRef.current.value)
         console.log(passwordRef.current.value)
         const auth = getAuth()
-        createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
+        signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
         .then(({user}) => {
-            console.log(user)
+            props.cbVisibileWindow(false)
+            dispatch(setUser({
+                email: user.email,
+                id: user.uid,
+                token: user.accessToken,
+            }))
         })
-        .catch(console.error)
+        .catch((error) => {
+            if (error) {
+                console.log('err')
+            }
+            // const errorCode = error.code;
+            // console.log(errorCode)
+            // const errorMessage = error.message;
+            // console.log(errorMessage)
+          });
     }
 
   return (
@@ -41,7 +52,7 @@ export const Auth = props => {
             </div>
             <div>
                 <input className='ButtonLogin' type='button' value='Login' onClick={authorization}/>
-                <input className='ButtonLogin' type='button' value='Register' onClick={registration}/>
+                <input className='ButtonLogin' type='button' value='Register' />
             </div>
         </div>
     </div>
