@@ -1,7 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// import productsArr from '../products.json';
-
 const initialState={
   products: [],
   loading: false,

@@ -27,6 +27,9 @@
         font-size: 30px;
         cursor: pointer;
     }
+    .Cabinet:hover {
+        color: red;
+    }
 }
 
 @media (min-width: 0px) and (max-width: 766px) {

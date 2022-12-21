@@ -1,0 +1,58 @@
+.Auth {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.608);
+
+    .Window {
+        position: absolute;
+        left: calc(50% - 150px);
+        top: 40%;
+        width: 300px;
+        height: 200px;
+        background-color: white;
+        border: solid black 1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.8);
+
+        .Block {
+            width: 250px;
+            height: 50px;
+            align-items: flex-start;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+           
+
+            p {
+                width: 100px;
+            }
+        }
+
+        .Row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ButtonClose {
+            width: 24px;
+            height: 24px;
+            align-self: flex-end;
+            cursor: pointer;
+            margin: 2px;
+        }
+
+        .ButtonLogin {
+            margin-bottom: 10px;
+            width: 60px;
+            cursor: pointer;
+        }
+    }
+}
