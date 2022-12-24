@@ -15,7 +15,6 @@ export const Search = React.memo(function Search(props) {
     clientEvents.emit('searchWithText', textRef.current.value)
   }
 
-  console.log('Рендер <Search />')
   return (
     <div to="/catalog" className='SearchBlock'>
       <div className='SearchOpen'>

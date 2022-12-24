@@ -29,6 +29,10 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {
 
+    updateProducts: (state, action) => {
+      state.products.push(action.payload)
+    },
+
     addInCart: (state, action) => {
       state.cart.push(action.payload)
     },
@@ -56,7 +60,7 @@ export const productsSlice = createSlice({
     
 });
 
-export const { addInCart, deleteFromCart } = productsSlice.actions;
+export const { updateProducts, addInCart, deleteFromCart } = productsSlice.actions;
 
 export default productsSlice.reducer;
 

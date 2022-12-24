@@ -12,28 +12,40 @@ export const Auth = props => {
     const emailRef = useRef()
     const passwordRef = useRef()
 
-    const authorization = () => {
-        console.log(emailRef.current.value)
-        console.log(passwordRef.current.value)
+    const authorization = async () => {
         const auth = getAuth()
-        signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
-        .then(({user}) => {
+        try {
+            const answer = await signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
             props.cbVisibileWindow(false)
             dispatch(setUser({
-                email: user.email,
-                id: user.uid,
-                token: user.accessToken,
+                        email: answer.user.email,
+                        id: answer.user.uid,
+                        token: answer.user.accessToken,
             }))
-        })
-        .catch((error) => {
-            if (error) {
-                console.log('err')
-            }
-            // const errorCode = error.code;
-            // console.log(errorCode)
-            // const errorMessage = error.message;
-            // console.log(errorMessage)
-          });
+        } catch(e) {
+            console.log(e.code)
+        }
+       
+
+        
+        
+        // .then(({user}) => {
+        //     props.cbVisibileWindow(false)
+        //     dispatch(setUser({
+        //         email: user.email,
+        //         id: user.uid,
+        //         token: user.accessToken,
+        //     }))
+        // })
+        // .catch((error) => {
+        //     if (error) {
+        //         console.log('err')
+        //     }
+        //     // const errorCode = error.code;
+        //     // console.log(errorCode)
+        //     // const errorMessage = error.message;
+        //     // console.log(errorMessage)
+        //   });
     }
 
   return (

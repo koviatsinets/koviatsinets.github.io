@@ -59,7 +59,6 @@ export const Filter = React.memo(function Filter(props) {
     clientEvents.emit("setFilterObj", obj)
   }
   
-  console.log('Рендер <Filter />')
   return (
     <aside className='Filter'>
         <p className='Title'>Подбор конструктора</p>

@@ -8,7 +8,6 @@ export const HeaderPanel = () => {
   const [modeVisible, setModeVisible] = useState(false)
 
   const visibileWindow = value => {
-    console.log(value)
     setModeVisible(value)
   }
 

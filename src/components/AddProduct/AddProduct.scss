@@ -1,0 +1,32 @@
+.AddProduct {
+    display: flex;
+    flex-direction: column;
+    border: solid grey 1px;
+    margin: 10px;
+    padding: 10px;
+
+    .Title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .Button {
+        text-align: center;
+        margin: 10px 0 0 0;
+        width: 100px;
+        cursor: pointer;
+        align-self: center;
+    }
+    .Row {
+        display: flex;
+        align-items: center;
+        height: 24px;
+    
+        .Text {
+            width: 150px;
+        }
+        .Input {
+            width: 200px;
+        }
+    }
+
+}
